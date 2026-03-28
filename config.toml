@@ -1,0 +1,43 @@
+[general]
+gaps_inner = 8
+gaps_outer = 12
+border_width = 2
+master_ratio = 0.55
+split_ratio = 0.5
+
+[layouts]
+default = "bsp"
+
+[keybindings]
+focus_left  = "cmd+h"
+focus_down  = "cmd+j"
+focus_up    = "cmd+k"
+focus_right = "cmd+l"
+
+move_left   = "cmd+shift+h"
+move_down   = "cmd+shift+j"
+move_up     = "cmd+shift+k"
+move_right  = "cmd+shift+l"
+
+toggle_float      = "cmd+shift+space"
+toggle_fullscreen = "cmd+shift+f"
+cycle_layout      = "cmd+space"
+close_window      = "cmd+shift+q"
+reload_config     = "cmd+shift+r"
+
+workspace_1 = "cmd+1"
+workspace_2 = "cmd+2"
+workspace_3 = "cmd+3"
+workspace_4 = "cmd+4"
+workspace_5 = "cmd+5"
+
+move_to_workspace_1 = "cmd+shift+1"
+move_to_workspace_2 = "cmd+shift+2"
+move_to_workspace_3 = "cmd+shift+3"
+move_to_workspace_4 = "cmd+shift+4"
+move_to_workspace_5 = "cmd+shift+5"
+
+[window_rules]
+# Float certain apps by default (Phase 3)
+# [[window_rules.float]]
+# app = "Calculator"
