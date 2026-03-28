@@ -32,6 +32,9 @@ struct Config {
         var closeWindow: String = "cmd+shift+q"
         var reloadConfig: String = "cmd+shift+r"
 
+        var resizeMasterGrow: String   = "cmd+="
+        var resizeMasterShrink: String = "cmd+-"
+
         var workspace1: String = "cmd+1"
         var workspace2: String = "cmd+2"
         var workspace3: String = "cmd+3"

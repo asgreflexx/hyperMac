@@ -85,8 +85,10 @@ move_up     = "cmd+shift+k"
 move_right  = "cmd+shift+l"
 
 toggle_float      = "cmd+shift+space"
-toggle_fullscreen = "cmd+shift+f"
-cycle_layout      = "cmd+space"
+toggle_fullscreen    = "cmd+shift+f"
+cycle_layout         = "cmd+space"
+resize_master_grow   = "cmd+="
+resize_master_shrink = "cmd+-"
 close_window      = "cmd+shift+q"
 reload_config     = "cmd+shift+r"
 
@@ -130,6 +132,8 @@ Modifier keys: `cmd`, `shift`, `opt` / `option`, `ctrl` / `control`.
 | Key | Action |
 |-----|--------|
 | `Cmd+Space` | Cycle between BSP and Master-Stack |
+| `Cmd+=` | Grow master / BSP primary pane (+5%) |
+| `Cmd+-` | Shrink master / BSP primary pane (-5%) |
 | `Cmd+Shift+Space` | Toggle float for focused window |
 | `Cmd+Shift+F` | Toggle fullscreen for focused window |
 

@@ -25,6 +25,9 @@ cycle_layout      = "cmd+space"
 close_window      = "cmd+shift+q"
 reload_config     = "cmd+shift+r"
 
+resize_master_grow   = "cmd+="
+resize_master_shrink = "cmd+-"
+
 workspace_1 = "cmd+1"
 workspace_2 = "cmd+2"
 workspace_3 = "cmd+3"

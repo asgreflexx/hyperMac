@@ -73,6 +73,9 @@ final class ConfigLoader {
             if let v = kb["close_window"]?.string { config.keybindings.closeWindow = v }
             if let v = kb["reload_config"]?.string { config.keybindings.reloadConfig = v }
 
+            if let v = kb["resize_master_grow"]?.string   { config.keybindings.resizeMasterGrow = v }
+            if let v = kb["resize_master_shrink"]?.string { config.keybindings.resizeMasterShrink = v }
+
             if let v = kb["workspace_1"]?.string { config.keybindings.workspace1 = v }
             if let v = kb["workspace_2"]?.string { config.keybindings.workspace2 = v }
             if let v = kb["workspace_3"]?.string { config.keybindings.workspace3 = v }

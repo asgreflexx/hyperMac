@@ -60,6 +60,9 @@ struct KeyBinding: Equatable {
             (kb.closeWindow,      .closeWindow),
             (kb.reloadConfig,     .reloadConfig),
 
+            (kb.resizeMasterGrow,   .resizeMasterGrow),
+            (kb.resizeMasterShrink, .resizeMasterShrink),
+
             (kb.workspace1, .switchWorkspace(1)),
             (kb.workspace2, .switchWorkspace(2)),
             (kb.workspace3, .switchWorkspace(3)),
@@ -87,6 +90,8 @@ enum HotkeyAction: Equatable {
     case cycleLayout
     case closeWindow
     case reloadConfig
+    case resizeMasterGrow
+    case resizeMasterShrink
     case switchWorkspace(Int)
     case moveToWorkspace(Int)
 }

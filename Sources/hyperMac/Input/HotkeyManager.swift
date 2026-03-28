@@ -128,6 +128,12 @@ final class HotkeyManager {
         case .reloadConfig:
             wm.reloadConfig()
 
+        case .resizeMasterGrow:
+            wm.adjustMasterRatio(delta: 1)
+
+        case .resizeMasterShrink:
+            wm.adjustMasterRatio(delta: -1)
+
         case .switchWorkspace(let n):
             wm.switchWorkspace(n)
 

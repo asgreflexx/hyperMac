@@ -1,6 +1,12 @@
 import AppKit
 import ApplicationServices
 
+private extension Comparable {
+    func clamped(to range: ClosedRange<Self>) -> Self {
+        min(max(self, range.lowerBound), range.upperBound)
+    }
+}
+
 // MARK: - ManagedWindow Model
 
 /// Represents a single managed window tracked by hyperMac.
@@ -321,6 +327,20 @@ final class WindowManager {
         windows[bID]?.orderIndex = aOrder
 
         retile(screen: screen)
+    }
+
+    // MARK: - Master Ratio Resize
+
+    func adjustMasterRatio(delta: CGFloat) {
+        let step: CGFloat = 0.05
+        let change = delta > 0 ? step : -step
+
+        LayoutEngine.shared.masterStackLayout.masterRatio =
+            (LayoutEngine.shared.masterStackLayout.masterRatio + change).clamped(to: 0.1...0.9)
+        LayoutEngine.shared.bspLayout.splitRatio =
+            (LayoutEngine.shared.bspLayout.splitRatio + change).clamped(to: 0.1...0.9)
+
+        if let screen = NSScreen.main { retile(screen: screen) }
     }
 
     // MARK: - Layout Cycling
